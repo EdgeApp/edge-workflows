@@ -1,0 +1,10 @@
+name: Git PR Autosquash
+
+on: [pull_request_review]
+
+jobs:
+  git-auto-rebase:
+    runs-on: ubuntu-latest
+    steps:
+    - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+    - uses: actions/checkout@v1.1.0 # Always pin
