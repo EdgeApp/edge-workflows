@@ -1,4 +1,4 @@
-name: Git Checks
+name: Git PR Checks
 
 on: [pull_request]
 
