@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+owner='EdgeApp'
+repository='edge-workflows'
+baseUrl=https://raw.githubusercontent.com/$owner/$repository/main
+
+# Make sure jq is installed
+if ! command -v jq &> /dev/null
+then
+  echo "jq command is required: https://stedolan.github.io/jq/download/"
+  exit
+fi
+
+echo "Retrieving file list..."
+directoryReadResponse=$(curl -s https://api.github.com/repos/$owner/$repository/contents/.github/workflows?ref=HEAD)
+workflowFiles=$(echo $directoryReadResponse | jq -r '.[].name')
+
+mkdir -p ./.github/workflows
+
+echo "$workflowFiles" | while read file; do
+  echo "Copying file '$file' to '.github/workflow/$file'..." 
+  curl -s -o ".github/workflows/$file" "https://raw.githubusercontent.com/EdgeApp/edge-workflows/main/.github/workflows/$file"
+done
