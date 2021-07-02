@@ -12,6 +12,11 @@ curl -s https://raw.githubusercontent.com/EdgeApp/edge-workflows/main/scripts/in
 
 This will add a `.github/workflows/` directory which should be tracked in your SCM. This command can also be used to update the workflow.
 
+## Upgrading
+
+To upgrade a repository's `.github/workflow` with the latest edition of the workflows, simply run the install command and commit the changes. 
+Workflow upgrade commits don't require a pull request or review and can be aded on the main (master) branch directly.
+
 ## [PR Checks](./.github/workflows/pr-checks.yml)
 
 Runs when creating or updating pull requests. It currently contains the [block-wip-pr-action](https://github.com/samholmes/block-wip-pr-action) which prevents PRs which have fixup/squash commits or merge commits from being merged into the main branch.
