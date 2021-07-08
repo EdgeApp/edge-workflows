@@ -16,14 +16,56 @@ jobs:
         uses: EdgeApp/github-action-file-sync@v2.0.0
         with:
           REPOSITORIES: |
+            EdgeApp/baselet
+            EdgeApp/biggystring
+            EdgeApp/disklet
+            EdgeApp/edge-components
             EdgeApp/edge-conventions
-            EdgeApp/edge-sync-server
-            EdgeApp/edge-login-server
+            EdgeApp/edge-core-js
+            EdgeApp/edge-currency-accountbased
+            EdgeApp/edge-currency-bitcoin
+            EdgeApp/edge-currency-ethereum
+            EdgeApp/edge-currency-monero
+            EdgeApp/edge-currency-plugins
+            EdgeApp/edge-devops
+            EdgeApp/edge-electrum-swarm
+            EdgeApp/edge-eospay-server
+            EdgeApp/edge-exchange-plugins
+            EdgeApp/edge-fee-tracker
             EdgeApp/edge-info-server
-            EdgeApp/edge-referral-server
-            EdgeApp/edge-rates-server
+            EdgeApp/edge-libplugin
+            EdgeApp/edge-login-server
+            EdgeApp/edge-login-ui
             EdgeApp/edge-logs-server
-            EdgeApp/edge-react-gui
+            EdgeApp/edge-notifications
+            EdgeApp/edge-plugin-bitrefill
+            EdgeApp/edge-plugin-bity
+            EdgeApp/edge-plugin-screens-and-components
+            EdgeApp/edge-plugin-simplex
+            EdgeApp/edge-plugin-wyre
+            EdgeApp/edge-rates-server
+            EdgeApp/edge-react-gui@develop
+            EdgeApp/edge-referral-manager
+            EdgeApp/edge-referral-server
+            EdgeApp/edge-reports
+            EdgeApp/edge-reports-server
+            EdgeApp/edge-rest-wallet
+            EdgeApp/edge-server-tools
+            EdgeApp/edge-shared-jenkins-libraries
+            EdgeApp/edge-snack-bar-app
+            EdgeApp/edge-swap-server
+            EdgeApp/edge-sync-client
+            EdgeApp/edge-sync-server
+            EdgeApp/edge-workflows
+            EdgeApp/memlet
+            EdgeApp/react-native-airship
+            EdgeApp/react-native-fast-crypto
+            EdgeApp/react-native-patina
+            EdgeApp/react-native-zcash
+            EdgeApp/redux-keto
+            EdgeApp/websocketer
+            EdgeApp/yaob
+            EdgeApp/zcash-demo-app
           FILES: |
             .github/workflows/pr-checks.yml=.github/workflows/pr-checks.yml
             .github/workflows/pr-rebase.yml=.github/workflows/pr-rebase.yml
