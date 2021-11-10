@@ -1,4 +1,8 @@
-name: Workflow Sync
+# 
+# This workflow synchronizes common files that every repository should include
+# within the Edge organization (e.g. GitHub Workflows, config, etc).
+# 
+name: File Sync
 on:
   push:
     branches:
