@@ -74,4 +74,5 @@ jobs:
           FILES: |
             .github/workflows/pr-checks.yml=.github/workflows/pr-checks.yml
             .github/workflows/pr-rebase.yml=.github/workflows/pr-rebase.yml
+            common/.yarnrc=.yarnrc
           TOKEN: ${{ secrets.WORKFLOW_SYNC_TOKEN }}
