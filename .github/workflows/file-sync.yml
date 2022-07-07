@@ -38,6 +38,7 @@ jobs:
             EdgeApp/edge-libplugin
             EdgeApp/edge-login-server
             EdgeApp/edge-login-ui
+            EdgeApp/edge-login-ui-rn
             EdgeApp/edge-logs-server
             EdgeApp/edge-notifications
             EdgeApp/edge-plugin-bitrefill
