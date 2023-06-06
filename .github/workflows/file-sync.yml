@@ -25,7 +25,7 @@ jobs:
             .github/workflows/asana-attachment.yml=.github/workflows/asana-attachment.yml
             .github/workflows/asana-comment.yml=.github/workflows/asana-comment.yml
             common/.yarnrc=.yarnrc
-          TOKEN: ${{ secrets.WORKFLOW_SYNC_TOKEN }}
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
   sync-standard:
     name: Sync Standard Files
     runs-on: ubuntu-latest
@@ -94,4 +94,4 @@ jobs:
             .github/workflows/asana-attachment.yml=.github/workflows/asana-attachment.yml
             .github/workflows/asana-comment.yml=.github/workflows/asana-comment.yml
             common/.yarnrc=.yarnrc
-          TOKEN: ${{ secrets.WORKFLOW_SYNC_TOKEN }}
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
