@@ -7,14 +7,17 @@ on:
   push:
     branches:
       - main
-permissions:
-  contents: write
-  repository-projects: write
 jobs:
   sync-gui:
     name: Sync GUI Files
     runs-on: ubuntu-latest
     steps:
+      - name: Generate token
+        id: generate_token
+        uses: EdgeApp/github-app-token@v1
+        with:
+          app_id: ${{ secrets.APP_ID }}
+          private_key: ${{ secrets.APP_PRIVATE_KEY }}
       - name: Fetching Local Repository
         uses: actions/checkout@master
       - name: File Sync
@@ -28,11 +31,17 @@ jobs:
             .github/workflows/asana-attachment.yml=.github/workflows/asana-attachment.yml
             .github/workflows/asana-comment.yml=.github/workflows/asana-comment.yml
             common/.yarnrc=.yarnrc
-          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TOKEN: ${{ steps.generate_token.outputs.token  }}
   sync-standard:
     name: Sync Standard Files
     runs-on: ubuntu-latest
     steps:
+      - name: Generate token
+        id: generate_token
+        uses: EdgeApp/github-app-token@v1
+        with:
+          app_id: ${{ secrets.APP_ID }}
+          private_key: ${{ secrets.APP_PRIVATE_KEY }}
       - name: Fetching Local Repository
         uses: actions/checkout@master
       - name: File Sync
@@ -97,4 +106,4 @@ jobs:
             .github/workflows/asana-attachment.yml=.github/workflows/asana-attachment.yml
             .github/workflows/asana-comment.yml=.github/workflows/asana-comment.yml
             common/.yarnrc=.yarnrc
-          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TOKEN: ${{ steps.generate_token.outputs.token  }}
