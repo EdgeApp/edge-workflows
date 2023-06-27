@@ -28,7 +28,6 @@ jobs:
           FILES: |
             .github/workflows/pr-checks.yml=.github/workflows/pr-checks.yml
             .github/workflows/pr-rebase.yml=.github/workflows/pr-rebase.yml
-            .github/workflows/asana-attachment.yml=.github/workflows/asana-attachment.yml
             .github/workflows/asana-comment.yml=.github/workflows/asana-comment.yml
             common/.yarnrc=.yarnrc
           TOKEN: ${{ steps.generate_token.outputs.token  }}
@@ -103,7 +102,6 @@ jobs:
             .github/PULL_REQUEST_TEMPLATE.md=.github/PULL_REQUEST_TEMPLATE.md
             .github/workflows/pr-checks.yml=.github/workflows/pr-checks.yml
             .github/workflows/pr-rebase.yml=.github/workflows/pr-rebase.yml
-            .github/workflows/asana-attachment.yml=.github/workflows/asana-attachment.yml
             .github/workflows/asana-comment.yml=.github/workflows/asana-comment.yml
             common/.yarnrc=.yarnrc
           TOKEN: ${{ steps.generate_token.outputs.token  }}
