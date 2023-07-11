@@ -53,6 +53,7 @@ jobs:
             EdgeApp/edge-components
             EdgeApp/edge-conventions
             EdgeApp/edge-core-js
+            EdgeApp/edge-cors-server
             EdgeApp/edge-currency-accountbased
             EdgeApp/edge-currency-bitcoin
             EdgeApp/edge-currency-ethereum
