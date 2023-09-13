@@ -1,7 +1,7 @@
-# 
+#
 # This workflow synchronizes common files that every repository should include
 # within the Edge organization (e.g. GitHub Workflows, config, etc).
-# 
+#
 name: File Sync
 on:
   push:
@@ -28,7 +28,6 @@ jobs:
           FILES: |
             .github/workflows/pr-checks.yml=.github/workflows/pr-checks.yml
             .github/workflows/pr-rebase.yml=.github/workflows/pr-rebase.yml
-            .github/workflows/asana-comment.yml=.github/workflows/asana-comment.yml
             common/.yarnrc=.yarnrc
           TOKEN: ${{ steps.generate_token.outputs.token  }}
   sync-standard:
@@ -103,6 +102,5 @@ jobs:
             .github/PULL_REQUEST_TEMPLATE.md=.github/PULL_REQUEST_TEMPLATE.md
             .github/workflows/pr-checks.yml=.github/workflows/pr-checks.yml
             .github/workflows/pr-rebase.yml=.github/workflows/pr-rebase.yml
-            .github/workflows/asana-comment.yml=.github/workflows/asana-comment.yml
             common/.yarnrc=.yarnrc
           TOKEN: ${{ steps.generate_token.outputs.token  }}
