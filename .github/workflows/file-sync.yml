@@ -99,7 +99,7 @@ jobs:
             EdgeApp/yaob
             EdgeApp/zcash-demo-app
           FILES: |
-            .github/PULL_REQUEST_TEMPLATE.md=.github/PULL_REQUEST_TEMPLATE.md
+            prTemplates/default.md=.github/PULL_REQUEST_TEMPLATE.md
             .github/workflows/pr-checks.yml=.github/workflows/pr-checks.yml
             .github/workflows/pr-rebase.yml=.github/workflows/pr-rebase.yml
             common/.yarnrc=.yarnrc
