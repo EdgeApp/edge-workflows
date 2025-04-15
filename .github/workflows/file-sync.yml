@@ -50,6 +50,7 @@ jobs:
             EdgeApp/baselet
             EdgeApp/biggystring
             EdgeApp/disklet
+            EdgeApp/edge-change-server
             EdgeApp/edge-components
             EdgeApp/edge-conventions
             EdgeApp/edge-core-js
