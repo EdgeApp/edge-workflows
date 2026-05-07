@@ -47,57 +47,108 @@ jobs:
         uses: EdgeApp/github-action-file-sync@v2.0.0
         with:
           REPOSITORIES: |
+            EdgeApp/altcoin-js
             EdgeApp/baselet
             EdgeApp/biggystring
             EdgeApp/disklet
+            EdgeApp/drupe
+            EdgeApp/edge-article-audit
+            EdgeApp/edge-autobot-server
+            EdgeApp/edge-brand-guide
             EdgeApp/edge-change-server
+            EdgeApp/edge-cli
             EdgeApp/edge-components
             EdgeApp/edge-conventions
             EdgeApp/edge-core-js
             EdgeApp/edge-cors-server
             EdgeApp/edge-currency-accountbased
             EdgeApp/edge-currency-bitcoin
+            EdgeApp/edge-currency-dash
             EdgeApp/edge-currency-ethereum
             EdgeApp/edge-currency-monero
             EdgeApp/edge-currency-plugins
+            EdgeApp/edge-currency-shitcoin
+            EdgeApp/edge-data-analysis
+            EdgeApp/edge-demo-app
+            EdgeApp/edge-dev-agents
             EdgeApp/edge-devops
+            EdgeApp/edge-docs
+            EdgeApp/edge-dummy-server
             EdgeApp/edge-electrum-swarm
             EdgeApp/edge-eospay-server
             EdgeApp/edge-exchange-plugins
+            EdgeApp/edge-exchange-server
             EdgeApp/edge-fee-tracker
+            EdgeApp/edge-gift-cards
             EdgeApp/edge-info-server
             EdgeApp/edge-libplugin
             EdgeApp/edge-login-server
             EdgeApp/edge-login-ui
             EdgeApp/edge-login-ui-rn
+            EdgeApp/edge-login-ui-rn-demo
+            EdgeApp/edge-login-ui-sample
+            EdgeApp/edge-login-ui-web-demo
             EdgeApp/edge-logs-server
+            EdgeApp/edge-monitor
+            EdgeApp/edge-monitor-server
             EdgeApp/edge-notifications
+            EdgeApp/edge-other-plugins
+            EdgeApp/edge-pack
             EdgeApp/edge-plugin-bitrefill
             EdgeApp/edge-plugin-bity
+            EdgeApp/edge-plugin-generic
             EdgeApp/edge-plugin-screens-and-components
             EdgeApp/edge-plugin-simplex
+            EdgeApp/edge-plugin-skeleton
+            EdgeApp/edge-plugin-starter
             EdgeApp/edge-plugin-wyre
+            EdgeApp/edge-provider-test
+            EdgeApp/edge-push-server
+            EdgeApp/edge-qauto
+            EdgeApp/edge-raffle-server
             EdgeApp/edge-rates-server
             EdgeApp/edge-referral-manager
             EdgeApp/edge-referral-server
+            EdgeApp/edge-relay-server
             EdgeApp/edge-reports
             EdgeApp/edge-reports-server
             EdgeApp/edge-rest-wallet
+            EdgeApp/edge-server-simplex
+            EdgeApp/edge-server-tests
             EdgeApp/edge-server-tools
+            EdgeApp/edge-serverless-functions
             EdgeApp/edge-shared-jenkins-libraries
+            EdgeApp/edge-shitcoin-server
+            EdgeApp/edge-snack-bar
             EdgeApp/edge-snack-bar-app
             EdgeApp/edge-swap-server
             EdgeApp/edge-sync-client
             EdgeApp/edge-sync-server
             EdgeApp/edge-theme-server
             EdgeApp/edge-workflows
+            EdgeApp/edge-workspaces
+            EdgeApp/edge-zignal
+            EdgeApp/eip-961-qr-generator
+            EdgeApp/fee-metrics
             EdgeApp/memlet
+            EdgeApp/nymtest
             EdgeApp/react-native-airship
+            EdgeApp/react-native-bcoin-demo
             EdgeApp/react-native-fast-crypto
+            EdgeApp/react-native-monero
+            EdgeApp/react-native-monero-lwsf
+            EdgeApp/react-native-mymonero-core
             EdgeApp/react-native-patina
+            EdgeApp/react-native-piratechain
+            EdgeApp/react-native-secp256k1
+            EdgeApp/react-native-zano
             EdgeApp/react-native-zcash
             EdgeApp/redux-keto
+            EdgeApp/redux-pixies
+            EdgeApp/updot
             EdgeApp/websocketer
+            EdgeApp/wsup
+            EdgeApp/x-cleaners
             EdgeApp/yaob
             EdgeApp/zcash-demo-app
           FILES: |
