@@ -1,0 +1,66 @@
+# Dependabot configuration shared across the EdgeApp organization.
+# Synced via .github/workflows/file-sync.yml.
+#
+# Docs: https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
+version: 2
+
+updates:
+  # Keep GitHub Actions in .github/workflows pinned to current versions.
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+      time: "09:00"
+      timezone: America/Los_Angeles
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: ci
+      include: scope
+    labels:
+      - dependencies
+      - github-actions
+    groups:
+      github-actions:
+        patterns:
+          - "*"
+
+  # Keep npm/yarn dependencies up to date.
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+      time: "09:00"
+      timezone: America/Los_Angeles
+    open-pull-requests-limit: 10
+    versioning-strategy: increase-if-necessary
+    commit-message:
+      prefix: chore
+      prefix-development: chore
+      include: scope
+    labels:
+      - dependencies
+      - javascript
+    groups:
+      # Bundle non-breaking updates into one PR per dependency type
+      # so reviewers can merge a single green build.
+      dev-dependencies:
+        dependency-type: development
+        update-types:
+          - minor
+          - patch
+      production-dependencies:
+        dependency-type: production
+        update-types:
+          - patch
+    ignore:
+      # React Native upgrades require coordinated native-side changes;
+      # bump these manually as part of an RN upgrade cycle.
+      - dependency-name: react-native
+      - dependency-name: react
+      - dependency-name: react-dom
+      # TypeScript major bumps frequently break our type-heavy libraries.
+      - dependency-name: typescript
+        update-types:
+          - version-update:semver-major
