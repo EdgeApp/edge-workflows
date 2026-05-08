@@ -30,6 +30,7 @@ jobs:
             .github/workflows/pr-checks.yml=.github/workflows/pr-checks.yml
             .github/workflows/pr-rebase.yml=.github/workflows/pr-rebase.yml
             common/.yarnrc=.yarnrc
+            common/dependabot.yml=.github/dependabot.yml
           TOKEN: ${{ steps.generate_token.outputs.token  }}
   sync-standard:
     name: Sync Standard Files
@@ -156,4 +157,5 @@ jobs:
             .github/workflows/pr-checks.yml=.github/workflows/pr-checks.yml
             .github/workflows/pr-rebase.yml=.github/workflows/pr-rebase.yml
             common/.yarnrc=.yarnrc
+            common/dependabot.yml=.github/dependabot.yml
           TOKEN: ${{ steps.generate_token.outputs.token  }}
